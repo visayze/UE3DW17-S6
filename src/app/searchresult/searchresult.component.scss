@@ -14,3 +14,28 @@
     height: auto;
   }
 }
+
+.mat-list-item{
+	width:33.333333%!important;
+	float:left;
+	transition: all 0.35s;
+}
+.mat-list-item *{
+
+	transition: all 0.35s;
+}
+.mat-list-item:hover{
+	background:#292929;
+	
+	h3{
+		color: white;
+	}
+	p{
+		color: white;
+	}
+}
+.mat-list-item:after {
+  content: "";
+  display: table;
+  clear: both;
+}

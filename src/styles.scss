@@ -2,6 +2,11 @@
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-body {
-  margin: 0px;
+html{
+	background-color: #292929;
+	
+	body {
+		margin:0;
+		padding:0;
+	}
 }
