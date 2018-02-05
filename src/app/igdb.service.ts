@@ -48,5 +48,19 @@ export class IgdbService {
         }
       );
   }
+
+  postReviewNote(userId: string, gameId: string, note:number) {
+    const body = {"score": note } ;
+    const url = `${this.baseUrl}/users/${userId}/games/${gameId}/review`;
+    const req =  
+    this.http.post(url,body,httpOptions)
+    .subscribe(
+        res => {
+          console.log(res);
+        },
+        err => {
+          console.log("Error occured");
+        }
+      );
+  }
 }
-  //  const url = `${this.baseUrl}/users/${userId}/games/${gameId}/review`;

@@ -15,27 +15,16 @@
   </mat-card-actions>
   
   <mat-card-actions>
-	<form class="example-form"> 
-	<mat-form-field class="example-full-width">
-    <input matInput placeholder="Saisir votre identifiant..." value="anonim"
-        #userId/>
-	</mat-form-field>
-    <input type="submit" value="J'y ai joué !" (click)="addReview(userId.value , game.id)"/> 
-	</form>
+    <input type="submit" value="J'y ai joué !" (click)="addReview(game.id)"/> 
   </mat-card-actions>
   
   <mat-card-actions>
-  <form class="example-form">
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Saisir votre identifiant..." value="anonim"
-        #userIdBis/>
-	</mat-form-field>
-	
-	<mat-form-field class="example-full-width">
-    <input matInput placeholder="Saisir une note entre 0 et 10 ..."
-        #note/>
-	</mat-form-field>
-    <input type="submit" value="Noter le jeu !" (click)="addReviewNote(userIdBis.value , game.id, note.value)"/> 
+  <form>
+  	<mat-form-field class="example-full-width">
+      <input matInput placeholder="Saisir note entre 0 et 10 ..."
+          #note/>
+  	</mat-form-field>
+    <input type="submit" value="Noter le jeu !" (click)="addReviewNote(game.id, note.value)"/> 
 	</form>
   </mat-card-actions>
 </mat-card>
